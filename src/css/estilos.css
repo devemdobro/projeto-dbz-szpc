@@ -1,0 +1,109 @@
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+main::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 80vh;
+  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat;
+}
+
+main .personagem {
+  display: none;
+  height: 100vh;
+}
+
+main .personagem.selecionado {
+  display: block;
+}
+
+main .personagem .imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-width: 380px;
+  z-index: 1;
+}
+
+.conteudo .nome-personagem {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: "Secular One";
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+  color: #ffffff;
+  font-family: "Rubik";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.botoes {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+}
+
+.botoes .botao {
+  border: none;
+  background-color: #000000;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.botoes .botao img {
+  border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
+
+.botoes .botao.cyberstorm.selecionado {
+  box-shadow: 0 0 10px #47ffc5;
+}
+
+.botoes .botao.codepixie.selecionado {
+  box-shadow: 0 0 10px #9747ff;
+}
+
+.botoes .botao.hexblade.selecionado {
+  box-shadow: 0 0 10px #ffa947;
+}
+
+.botoes .botao.neonpulse.selecionado {
+  box-shadow: 0 0 10px #e4309a;
+}
+
+.botoes .botao.codebreaker.selecionado {
+  box-shadow: 0 0 10px #fff047;
+}
